@@ -1178,33 +1178,35 @@ void PrintConfigDef::init_fff_params()
     def->mode = comAdvanced;
     def->set_default_value(new ConfigOptionFloat(0.));
 
-    def = this->add("bridge_density", coPercent);
-    def->label = L("External bridge density");
+    def           = this->add("bridge_density", coPercent);
+    def->label    = L("External bridge density");
     def->category = L("Strength");
-    def->tooltip = L("Controls the density (spacing) of external bridge lines. Default is 100%.\n\n"
-                     "Lower density external bridges can help improve reliability as there is more space for air to circulate "
-                     "around the extruded bridge, improving its cooling speed. Minimum is 10%.\n\n"
-                     "Higher densities can produce smoother bridge surfaces, as overlapping lines provide "
-                     "additional support during printing. Maximum is 120%.\n"
-                     "Note: Bridge density that is too high can cause warping or overextrusion.");
+    def->tooltip  = L("Controls the density (spacing) of external bridge lines. Default is 100%.\n\n"
+                       "Lower density external bridges can help improve reliability as there is more space for air to circulate "
+                       "around the extruded bridge, improving its cooling speed. Minimum is 10%.\n\n"
+                       "Higher densities can produce smoother bridge surfaces, as overlapping lines provide "
+                       "additional support during printing. Maximum is 150%.\n"
+                       "Note: Bridge density that is too high can cause warping or overextrusion.");
     def->sidetext = "%";
-    def->min = 10;
-    def->max = 120;
-    def->mode = comAdvanced;
+    def->min      = 10;
+    def->max      = 150;
+    def->mode     = comAdvanced;
     def->set_default_value(new ConfigOptionPercent(100));
 
-    def = this->add("internal_bridge_density", coPercent);
-    def->label = L("Internal bridge density");
+    def           = this->add("internal_bridge_density", coPercent);
+    def->label    = L("Internal bridge density");
     def->category = L("Strength");
-    def->tooltip = L("Controls the density (spacing) of internal bridge lines. 100% means solid bridge. Default is 100%.\n\n"
-                     "Lower density internal bridges can help reduce top surface pillowing and improve internal bridge reliability as there is more space for "
-                     "air to circulate around the extruded bridge, improving its cooling speed.\n\n"
-                     "This option works particularly well when combined with the second internal bridge over infill option, "
-                     "further improving internal bridging structure before solid infill is extruded.");
+    def->tooltip  = L("Controls the density (spacing) of internal bridge lines. 100% means solid bridge. Default is 100%.\n\n"
+                       "Lower density internal bridges can help reduce top surface pillowing and improve internal bridge reliability as "
+                       "there is more space for "
+                       "air to circulate around the extruded bridge, improving its cooling speed.\n\n"
+                       "This option works particularly well when combined with the second internal bridge over infill option, "
+                       "additional support during printing. Maximum is 150%.\n"
+                       "further improving internal bridging structure before solid infill is extruded.");
     def->sidetext = "%";
-    def->min = 10;
-    def->max = 100;
-    def->mode = comAdvanced;
+    def->min      = 10;
+    def->max      = 150;
+    def->mode     = comAdvanced;
     def->set_default_value(new ConfigOptionPercent(100));
 
     def = this->add("bridge_flow", coFloat);
