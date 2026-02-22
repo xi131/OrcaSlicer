@@ -15597,10 +15597,10 @@ msgid "Start G-code when starting the printing of this filament."
 msgstr "开始使用这个耗材丝打印的起始G-code"
 
 msgid "Single Extruder Multi Material"
-msgstr "单挤出机多材料"
+msgstr "换色回擦拭塔"
 
 msgid "Use single nozzle to print multi filament."
-msgstr "使用单喷嘴打印多耗材"
+msgstr "是否换色回擦拭塔"
 
 msgid "Manual Filament Change"
 msgstr "手动更换丝材"
